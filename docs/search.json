@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data-Visualization-Portfolio",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Taj",
     "section": "",
-    "text": "Reworked Visualization\n\n\nthis graph sucks less lol\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nNov 18, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning Visualization\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nNov 16, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nReworked Visualization\n\n\nthis graph sucks lol\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nNov 16, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nAn Interactive Visualization\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 18, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\num… hi?\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 1, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nHarlow Malloc\n\n\n\n\n\nNo matching items"
+    "text": "data portfolio of someone who yearns for a 2nd majora’s mask remake\nsenior at augsburg university majoring in computer science minoring in data science & economics"
   },
   {
     "objectID": "PortfolioEthics.html",
@@ -63,10 +63,10 @@
     "text": "ahem What you see before you is a map I worked on for my group project with Hennepin County. It maps expiration rates for every ZIP code in Hennepin County, and compares Black & White applicants’ baseline expiration rate for each county, and the gap between them. Go ahead, move your cursor around and take a look.\n\nYou might be wondering, “what’s wrong with it Taj? It seems fine to me?” Well…\n\n\n\nyeah last time i checked maps shouldn’t look like that\n\n\nBecause I exported my map as an html file, I’m met with that map. Now as of writing this, I don’t meet with Hennepin County until about 2 weeks from now, and if I dare show them this map? I’m gonna get death glares from my group members and a disappointed look in my professor (maybe not the last part but being dramatic sometimes is fun).\nAnyways, let’s fix this thing. I’m starting to feel bad now.\nSo I swapped providers, and they all kept giving me the same general “access blocked” or “hey fork over an api key man this stuff isn’t cheap”. This was bothering me for about a week now, cause I was like “maybe my api key is wrong? maybe..i’m wrong?”\nTurns out the fix was simpler than I thought. And it’s all because of this line:\n\n# addProviderTiles(\"OpenStreetMap\") |&gt;\n\nNow normally when you render a QMD file from RStudio (or the terminal if you’re a freak) it has your code hosted through localhost. What I learned is that each provider only accepts connections that have either http: or https: in the URL. But when you run it directly from your hard drive, the only URL you got is C: or Users/, which will automatically get rejected.\nTo test this, I made a simple localhost server using python to host my map file.\n\n\n\nwait woah that actually worked\n\n\nAND IT WORKED.\nSo I got two options here:\n\nHost my map on an actual server\nChange to a provider that doesn’t care\n\nWhile I do have the techincal know-how for making servers (i have a minecraft server up as we speak! ask me anytime about it and i’ll infodump), for the sake of everyone’s time I’ll just change the provider.\n\nThank you Esri for not caring."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Taj",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data-Visualization-Portfolio",
     "section": "",
-    "text": "data portfolio of someone who yearns for a 2nd majora’s mask remake\nsenior at augsburg university majoring in computer science minoring in data science & economics"
+    "text": "Reworked Visualization\n\n\nthis graph sucks less lol\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nNov 18, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning Visualization\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nNov 16, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nReworked Visualization\n\n\nthis graph sucks lol\n\n\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nNov 16, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nAn Interactive Visualization\n\n\n\n\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 18, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\num… hi?\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 1, 2026\n\n\nTaj Mckinnon\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nHarlow Malloc\n\n\n\n\n\nNo matching items"
   }
 ]

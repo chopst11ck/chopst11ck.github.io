@@ -1,15 +1,5 @@
 ---
 title: "Data-Visualization-Portfolio"
-format:
-  html:
-    theme: spacelab
-website:
-  navbar:
-    background: primary
-    search: true
-    left:
-      text: "home"
-      href: index.qmd
 listing:
   contents: posts
   sort: "date desc"

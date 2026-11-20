@@ -3,18 +3,16 @@ project:
   output-dir: docs
 
 website:
-  title: "Data-Visualization-Portfolio"
+  title: "Taj's Data Visualization Portfolio"
   navbar:
-    right:
-      - about.qmd
+    background: primary
+    search: true
+    left:
+      - text: "About Taj"
+        href: about.qmd
       - icon: github
         href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
 format:
   html:
     theme: spacelab
-    css: styles.css
-
-
 
