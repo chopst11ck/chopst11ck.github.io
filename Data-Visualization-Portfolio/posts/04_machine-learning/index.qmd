@@ -1,0 +1,15 @@
+---
+title: "Machine Learning Visualization"
+author: "Taj Mckinnon"
+date: "2026-11-16"
+categories: [analysis]
+image: "image.jpg"
+---
+
+So uh... visualizations? 
+
+My group has made a few visualizations for our project, and here's one I would like to share.
+
+As a disclaimer, this was made by my groupmate Ben. 
+
+<img src = "dwplothc.png", >
