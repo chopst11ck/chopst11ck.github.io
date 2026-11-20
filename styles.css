@@ -1,1 +1,8 @@
 /* css styles */
+.navbar {
+  background-image: linear-gradient(
+    rgb(112.88, 144.8, 179),
+    #446e9b 50%,
+    rgb(62.56, 101.2, 142.6)
+  );
+}
