@@ -1,9 +1,0 @@
----
-title: "um... hi?"
-author: "Taj Mckinnon"
-date: "2026-9-31"
-categories: [news]
----
-
-so uh... welcome to my first post i guess \
-here you can find what i'm up to in class, like what visualizations i've made or what dumb stuff i got myself into. 
