@@ -1,0 +1,17 @@
+{
+  "hash": "ba090cd99c01d1713648c2086be76489",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Reworked Visualization\"\nsubtitle: \"this graph sucks lol\"\nauthor: \"Taj Mckinnon\"\ndate: \"2026-11-18\"\ncategories: [code, analysis]\nimage: \"image.jpg\"\necho: false\nmessage: false\nwarning: false\n---\n\nI present to you all: a visualization I made on the 2nd day of class.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nHurts your eyes, doesn't it? To be fair, I was relearning R at this point, and it had been a year since I had used it (oops...) so... <br>\nLet's see how I can make this look better!\n\nMaybe a new splash of color...?\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\nWell that certainly isn't confusing at all. Let's try a different graph style this time, along with a new color palette.\n(i'm rereading this and i'm realizing that i sound like an LLM, which makes me sad.\nalthough, does that mean i'm losing my humanity, or is an LLM getting better at\nmimicking it? questions for later i guess.)\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\nNow that's more like it!<br>\nThe color palette is all nice, the graph doesn't look like a heart rate monitor,\nand it still gets the message across! It's all I ever wanted!\n\nFor the previous one, I was too focused on including the spikes in the graph. The\npreservationist in me wanted to keep everything on the graph, which isn't a bad\nmentality to have at all! Just not a good mentality for data sometimes, since then\nyou can end up with the rainbow mess that was the first graph.\n\nHopefully my future graphs will be better...\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

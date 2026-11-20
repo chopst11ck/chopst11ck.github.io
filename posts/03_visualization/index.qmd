@@ -1,0 +1,59 @@
+---
+title: "An Interactive Visualization"
+author: "Taj Mckinnon"
+date: "2026-10-18"
+categories: [analysis]
+echo: false
+warning: false
+image: thumbnail.jpg
+---
+Growing up, I always had 2 ideas of "home". Minneapolis, and St. Petersburg, Florida. It makes sense, since my dad's from there, and my mom immigrated to there, and my oldest sister was born there, and yeah you get the point. We're gonna be here a while if I keep listing off reasons, cause I got a billion of them. 
+
+<img src = "image.jpg" width = 300>
+
+Now that that's out of the way, here's a visualization that I ~~jankily~~ masterfully put together
+
+
+```{r}
+library(tidyverse)
+library(plotly)
+#| message: false
+
+# Location of the excel file:
+url <- 'https://github.com/jmzobitz/HNDSDatasets/raw/refs/heads/main/data-raw/Unemployment.xlsx'
+
+
+# Name of the file to save:
+destfile <- "Unemployment.xlsx"
+
+# Download
+curl::curl_download(url, destfile)
+unemployment_data <- readxl::read_excel(destfile,
+                                 skip = 4,
+                                 sheet = 'UnemploymentMedianIncome')
+
+mn_fl_data <- unemployment_data |>
+  filter(Area_Name %in% c("Hennepin County, MN", "Pinellas County, FL"))
+
+mn_fl_data_longer <- mn_fl_data |>
+  select(starts_with("Unemployment_rate"), Area_Name) |>
+  pivot_longer(cols = starts_with("Unemployment_rate")) |>
+  separate_wider_position(name, c(name = 18, Year = 4)) |>
+  mutate(Year = as.numeric(Year))
+
+mn_fl_plot <- mn_fl_data_longer |>
+  ggplot(aes(x = Year, y = value, color = Area_Name)) +
+  geom_line(linewidth = 1.5) +
+  labs(
+    y = "Unemployment Rate (%)",
+    title = "Unemployment Rates between Pinellas County and Hennepin County",
+    color = "County"
+  )
+ggplotly(mn_fl_plot)
+```
+
+
+I chose Pinellas County because my family is from Florida, so I wanted to have data that has some meaning to me.
+
+Hennepin County has about a 30% bigger population than Pinellas County, but as the data shows, Pinellas County has had higher amounts of unemployment. \
+By looking at the years, you can piece together events that happened during those times (2008 recession, COVID, etc.)

@@ -1,0 +1,15 @@
+{
+  "hash": "738c198eda4ed2ffbde1845ceb4f55a3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Reworked Visualization\"\nsubtitle: \"this graph sucks less lol\"\nauthor: \"Taj Mckinnon\"\ndate: \"2026-11-18\"\ncategories: [code, analysis]\nimage: \"image.jpg\"\necho: false\nmessage: false\nwarning: false\n---\n*ahem*<br>\nWhat you see before you is a map I worked on for my group project with Hennepin County.<br>\nIt maps expiration rates for every ZIP code in Hennepin County, and compares Black & White\napplicants' baseline expiration rate for each county, and the gap between them. Go ahead, move your cursor around and take a look.\n\n\n```{=html}\n<iframe src=\"race_gap_map.html\" width=\"100%\" height=\"600px\" style=\"border: 1px solid #ccc; border-radius: 4px;\"></iframe>\n```\nYou might be wondering, \"what's wrong with it Taj? It seems fine to me?\" Well...\n\n![yeah last time i checked maps shouldn't look like that](badmap.jpg)\n\nBecause I exported my map as an html file, I'm met with that map. Now as of writing\nthis, I don't meet with Hennepin County until about 2 weeks from now, and if I dare show them\nthis map? I'm gonna get death glares from my group members and a disappointed\nlook in my professor (maybe not the last part but being dramatic sometimes\nis fun).\n\nAnyways, let's fix this thing. I'm starting to feel bad now.\n\nSo I swapped providers, and they all kept giving me the same general \"access blocked\"\nor \"hey fork over an api key man this stuff isn't cheap\". This was bothering me \nfor about a week now, cause I was like \"maybe my api key is wrong? maybe..i'm wrong?\"\n\nTurns out the fix was simpler than I thought. And it's all because of this line:\n\n::: {.cell}\n\n```{.r .cell-code}\n# addProviderTiles(\"OpenStreetMap\") |>\n```\n:::\n\nNow normally when you render a QMD file from RStudio (or the terminal if you're\na freak) it has your code hosted through localhost. What I learned is that each\nprovider only accepts connections that have either http: or https: in the URL.\nBut when you run it directly from your hard drive, the only URL you got is C:\\ or\nUsers/, which will automatically get rejected.\n\nTo test this, I made a simple localhost server using python to host my map file.\n\n![wait woah that actually worked](served_map.jpg)\n\nAND IT WORKED.\n\nSo I got two options here:\n\n<ul>\nHost my map on an actual server\n\nChange to a provider that doesn't care\n</ul>\n\nWhile I do have the techincal know-how for making servers (i have a minecraft server\nup as we speak! ask me anytime about it and i'll infodump), for the sake of\neveryone's time I'll just change the provider.\n\n```{=html}\n<iframe src=\"fixed_gap_map.html\" width=\"100%\" height=\"600px\" style=\"border: 1px solid #ccc; border-radius: 4px;\"></iframe>\n```\n\nThank you Esri for not caring.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
